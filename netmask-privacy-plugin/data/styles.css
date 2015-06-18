@@ -1,0 +1,165 @@
+textarea {
+    margin: 10px;
+}
+body {
+    background-color: #FFF;
+    border: 1px gray;
+}
+
+/*copied from bootstrap3 */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-recommended {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+
+/*popover, modified from http://codepen.io/anon/pen/oXGvNm*/
+
+/* Just to center things */
+.center {
+    margin: 100px auto;
+    width: 30px;
+}
+
+/* The element to hover over */
+.qs {
+    cursor: default;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    height: 30px;
+    width: 250px;
+    line-height: 30px;
+}
+
+.qs a{
+    cursor: default;
+    color:#000;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #D3D3D3;
+}
+.qs .popover {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    bottom: 42px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: none;
+    font-size: 12px;
+    left: 5px;
+    height: 150px;
+    top: -190px;
+    padding: 7px 10px;
+    position: relative;
+    width: 200px;
+    z-index: 4;
+}
+.qs .popover:before {
+    text-decoration-line: none;
+    border-top: 7px solid rgba(0, 0, 0, 0.85);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    bottom: -7px ;
+    content: '';
+    display: block;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute;
+}
+.qs:hover .popover {
+  display: block;
+  -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
+  -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
+  -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes move-up {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 42px;
+  }
+}
+@-moz-keyframes move-up {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 42px;
+  }
+}
+@-ms-keyframes move-up {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 42px;
+  }
+}
