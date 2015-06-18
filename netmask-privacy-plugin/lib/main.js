@@ -186,8 +186,3 @@ function set_all_recommended_preference_values() {
         setPreferenceValue(key, suggested_value)
     }
 }
-
-// By AMO policy global preferences must be changed back to their original value
-unload(function() {
-    restore_default_preference_values()
-});
