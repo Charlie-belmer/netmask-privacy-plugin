@@ -1,26 +1,37 @@
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-  <h2>Netmasker - Privacy Lock Down</h2>
-  <hr>
+  <h3>Netmasker - Privacy Lock Down</h3>
   <p>
-  Hhidden browser settings can send identifying information about you without your express permission, but these permissions are not easily modified.</p>
+  Hidden browser settings can send identifying information about you without your express permission. Keep control of your data by tuning them here.</p>
   <p>For more information on private and secure browsing, see <a href="http://www.netmasked.com/the-complete-guide-to-anonymous-surfing/">Netmasked.com</a>
   </p>
-  <hr>
-  <p>
-  Set everything with one click using the below buttons:
-  </p>
-  <button id="set-all-suggested" type="button" class="btn btn-info">Max Privacy</button>
-  <button id="set-all-default" type="button" class="btn btn-danger">Default All</button>
+  <h4>
+  Set everything with one click:
+  </h4>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3">
+        <button id="set-all-suggested" type="button" class="btn btn-info">Max Privacy</button>
+      </div>
+      <div class="col-xs-3"></div>
+      <div class="col-xs-3">
+        <button id="set-all-default" type="button" class="btn btn-danger">Default All</button>
+      </div>
+    </div>
+  </div>
   
   <hr>
-    <h3>Browser Privacy Settings</h3>
-    <table id="about-config-options">
+    <h4>Browser Privacy Settings</h4>
+    <div id="about-config-options" class="container-fluid">
 
-    </table>
+    </div>
     <p class="mini">
     This plugin brought to you by <a href="http://www.netmasked.com">NetMasked privacy and security</a>
     </p>

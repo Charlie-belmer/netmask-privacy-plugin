@@ -4,55 +4,12 @@ textarea {
 body {
     background-color: #FFF;
     border: 1px gray;
+    margin: 10px;
 }
 
-/*copied from bootstrap3 */
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#about-config-options .row {
+    height: 40px;
 }
-
-.btn-recommended {
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-}
-
-.btn-custom {
-    color: #fff;
-    background-color: #f0ad4e;
-    border-color: #eea236;
-}
-
-.btn-default {
-    color: #fff;
-    background-color: #d9534f;
-    border-color: #d43f3a;
-}
-
-.btn-info {
-    color: #fff;
-    background-color: #5bc0de;
-    border-color: #46b8da;
-}
-
-.btn-danger {
-    color: #fff;
-    background-color: #d9534f;
-    border-color: #d43f3a;
-}
-
 
 /*popover, modified from http://codepen.io/anon/pen/oXGvNm*/
 

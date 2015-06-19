@@ -1,13 +1,13 @@
 var privacy_preferences = {};
 //html for every preference selection
-var toggle_html =  '<tr> ';
-toggle_html +=  '<td><div><span class="qs"><b><a href="" onclick="return false;"> %NAME%</a> </b><span class="popover above">';
-toggle_html +=  '<p>%DESC%</p>';
-//toggle_html +=  '<p>default:<i> %DEFAULT% </i><br />';
-//toggle_html +=  'Recommended:<i> %SUGGESTED%</i></p>';
-toggle_html += '</span></span></div></td>';
-toggle_html += '<td> <button id=%KEY% type="button" class="btn %CLASS% ">%CURRENT%</button> </td>';
-toggle_html += "</div></tr>";
+var toggle_html =  '<div class="row">';
+toggle_html += '<div class="col-xs-8"><span class="qs">';
+toggle_html += '<b>%NAME%</b> <a href="" onclick="return false;">  <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>';
+toggle_html += '<span class="popover above">';
+toggle_html += '<p>%DESC%</p>';
+toggle_html += '</span></span></div>';
+toggle_html += '<div class="col-xs-2"> <button id=%KEY% type="button" class="btn %CLASS% ">%BUTTON_TEXT%</button>';
+toggle_html += "</div></div>";
 
 /****
 replace placeholders in str with their replacements
@@ -35,19 +35,22 @@ function display_status() {
         current = privacy_preferences[pref]['current_value']
         suggested = privacy_preferences[pref]['suggested']
         pdefault = privacy_preferences[pref]['default'] 
-        style = "btn-custom"
+        style = "btn-warning"
+        button_text = "Custom Setting"
         if(pdefault == current) {
-            style = "btn-default";
+            style = "btn-danger";
+            button_text = "Not Secure"
         }
         else if(suggested == current) {
-            style = "btn-recommended";
+            style = "btn-success";
+            button_text = "Secure"
         }
         replacements = {
             "%KEY%": key,
             "%NAME%": privacy_preferences[pref]['name'],
             "%DESC%": privacy_preferences[pref]['description'],
             "%DEFAULT%": pdefault,
-            "%CURRENT%": current,
+            "%BUTTON_TEXT%": button_text,
             "%SUGGESTED%": suggested,
             "%CLASS%": style,
         };
