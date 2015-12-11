@@ -14,5 +14,7 @@ Some of the settings that are manageable:
  * Disable sockets and pings (which can break some applications)
  * Set up general parameters for protection, and preventing sites from bypassing some filters.
 
- Here is a screen shot of the installed plugin:
+
+View of the installed plugin:
+
  ![Netmasker Privacy Plugin Screenshot](/screenshots/netmasker_screen_shot.png?raw=true "Installed Plugin")
