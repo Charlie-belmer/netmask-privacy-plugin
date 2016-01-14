@@ -189,7 +189,7 @@ function set_all_recommended_preference_values() {
 
 //restore deaults on unload
 exports.onUnload = function (reason) {
-    if reason == "uninstall" || reason == "disable" {
+    if (reason == "uninstall" || reason == "disable") {
         restore_default_preference_values();
     }
 };
