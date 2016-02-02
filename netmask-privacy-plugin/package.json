@@ -1,9 +1,9 @@
 {
   "name": "netmasked-privacy-plugin",
   "title": "Netmasked",
-  "id": "jid1-UiLmFy1XCXLqRA",
+  "id": "jid1-UiLmFy1XCXLqRA@jetpack",
   "description": "Enables simple updates to hiddne privacy settings",
   "author": "Netmask at netmasked.com",
   "license": "MPL 2.0",
-  "version": "1.01"
+  "version": "1.0.2"
 }
