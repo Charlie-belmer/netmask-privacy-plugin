@@ -13,9 +13,9 @@ Some of the settings that are manageable:
  * Disable sockets and pings (which can break some applications)
  * Set up general parameters for protection, and preventing sites from bypassing some filters.
 
- ### Full list of hidden settings that can be controlled:
+### Full list of hidden settings that can be controlled:
 
- If you think I missed something, submit an issue or a pull request with the explanation.
+ If you think I missed something, please submit an issue or a pull request with the explanation.
 
   * media.peerconnection.enabled
   * media.peerconnection.use_document_iceservers
@@ -37,7 +37,7 @@ Some of the settings that are manageable:
 
  ![Netmasker Privacy Plugin Screenshot](/screenshots/netmasker_screen_shot.png?raw=true "Installed Plugin")
 
- ## Manual Install
+## Manual Install
 
 If you don't wish to download the plugin from the Firefox marketplace, download the complete
 package. Open the FireFox extensions window, and click settings->install add-in from file.
