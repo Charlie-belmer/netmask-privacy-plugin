@@ -3,7 +3,7 @@ Automates the mangagement and setting of hidden firefox privacy parameters for m
 
 ## Installation Instructions
 
-This plugin can be found in the [Firefox marketplace](https://addons.mozilla.org/en-US/firefox/addon/netmasked/), or by searching "Netmasked"
+This plugin can be found in [Firefox Addons](https://addons.mozilla.org/en-US/firefox/addon/netmasked/), or by searching "Netmasked"
 
 Once installed, the add in will help give you fine grained control and advice to manage the hidden parameters of the browser to improve overall privacy.
 
