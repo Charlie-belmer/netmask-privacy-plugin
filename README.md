@@ -45,3 +45,16 @@ package. Open the FireFox extensions window, and click settings->install add-in 
 Browse to the unzipped directory, find the .xpi file, and load it. 
 
 Loading the extension does not require a restart of the browser.
+
+# Creating a local build
+Because this application expects both a native app and a plugin, there are two distinct code bases here.
+
+The plugin is written in JavaScript, and the native app in Golang. To work with Golang, some additional folder structures are suggested to be created. The following folder structure is suggested:
+
+ - PROJECT_ROOT
+  - bin
+  - pkg
+  - src
+    - repo
+      - firefox-addon
+      - ...

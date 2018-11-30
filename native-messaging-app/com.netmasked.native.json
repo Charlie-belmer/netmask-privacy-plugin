@@ -1,0 +1,7 @@
+{
+  "name": "com.netmasked.native",
+  "description": "Manages the Firefox settings file user.js",
+  "path": "/home/cbelmer/projects/netmask-privacy-plugin/src/netmask-privacy-plugin/native-messaging-app/native-messaging-app",
+  "type": "stdio",
+  "allowed_extensions": [ "privacy_plugin@netmasked.com" ]
+}
