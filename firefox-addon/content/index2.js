@@ -2,7 +2,7 @@
 On startup, connect to the "ping_pong" app.
 */
 console.log("starting up")
-var port = browser.runtime.connectNative("com.netmasked.native");
+var port = browser.runtime.connectNative("privacy_plugin");
 console.log("port open")
 /*
 Listen for messages from the app.

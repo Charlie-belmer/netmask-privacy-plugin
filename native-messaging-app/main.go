@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"bufio"
 	"os"
 	"encoding/json"
 	"encoding/binary"
+	"log"
 )
 
 type message struct {
@@ -15,33 +15,48 @@ type message struct {
 
 func main() {
 	c := make(chan string)
-	go readInput(c)
-	//go handleInput(c)
-	for {
-        var input string 
-        input = <-c
-        //fmt.Println("Received ", input)
-        msg := "Received " + input
-        m := encodeMessage(msg)
-        sendMessage(m)
+
+	logFile, err := os.OpenFile("netmask.log", os.O_RDWR | os.O_CREATE | os.O_APPEND, 0666)
+	if err != nil {
+        log.Fatal(err)
     }
+	defer logFile.Close()
+	log.SetOutput(logFile)
+	log.Println("Starting up")
+	
+	go readInput(c)
+	handleInput(c)
 }
 
 func readInput(channel chan<- string) {
+	reader := bufio.NewReader(os.Stdin)
+	lnBytes := make([]byte, 4) //length of string to read
+
     for {
-        var input string
-        scanner := bufio.NewScanner(os.Stdin)
-        scanner.Scan()
-        input = scanner.Text()
-        channel <- input
+    	_, err := reader.Read(lnBytes)
+		if err != nil {
+	        log.Fatal(err)
+	    }
+    	msgLen := binary.LittleEndian.Uint32(lnBytes)
+    	log.Printf("Length: %d", msgLen)
+
+    	data := make([]byte, msgLen)
+    	_, err = reader.Read(data)
+    	if err != nil {
+	        log.Fatal(err)
+	    }
+
+    	channel <- string(data)
     }
 }
 
 func handleInput(channel <- chan string) {
+    var input string
     for {
-        var input string 
         input = <-channel
-        fmt.Println("Received ", input)
+        msg := "Received " + input
+        log.Print(msg)
+        sendMessage(msg)
     }
 }
 
@@ -53,7 +68,8 @@ func encodeMessage(s string) (message){
 	return m
 }
 
-func sendMessage(m message) {
+func sendMessage(s string) {
+	m := encodeMessage(s)
 	f := bufio.NewWriter(os.Stdout)
 	bs := make([]byte, 4)
     binary.LittleEndian.PutUint32(bs, m.length)
